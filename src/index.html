@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wbpack Exercise</title>
 </head>
-<body>
-    <h1>Leaderboard</h1>
-    <p>Recent Scores</p><button>Refresh</button>
-    <div id='leaderboard'>
 
+<body>
+    <div class='container'>
+        
+        <div>
+            <h1>Leaderboard</h1>
+            <p>Recent Scores</p>
+            <button>Refresh</button>
+            <div id='leaderboard'></div>
+        </div>
+        <form>
+            <p>Add Your score</p>
+            <input type='text' id='name' placeholder='Your name' required>
+            <input type='number' id='score' placeholder='Your Score' required>
+            <input type='submit' value=Submit>
+        </form>
     </div>
-    <form>
-        <p>Add Your score</p>
-        <input type='text' id='name' placeholder='Your name' required>
-        <input type='number' id='score' placeholder='Your Score' required>
-        <input type='submit' value=Submit>
-    </form>
 </body>
+
 </html>

@@ -1,12 +1,25 @@
 import _ from 'lodash';
 import './style.css'
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+const leaderBoard = [
+    {name:'ahmad',score:100},
+    {name:'ahmad',score:100},
+    {name:'ahmad',score:100},
+    {name:'ahmad',score:100},
+    {name:'ahmad',score:100}];
+const displayList = () => {
+  const section = document.getElementById('leaderboard');
+  const list = document.createElement('ul');
+  list.id = 'list';
+  leaderBoard.forEach((row) => {
+    const { name, score } = row;
+    let card = `<li class="" >
+    <p>${name}: ${score}</p>
+    </li>`;
+    list.insertAdjacentHTML('beforeend', card);
+  });
+  section.innerHTML = '';
+  section.appendChild(list);
+    };
+document.addEventListener('DOMContentLoaded', () => {
+    displayList();
+    });

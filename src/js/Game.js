@@ -34,7 +34,6 @@ export default class Game {
             })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 id = (data.result.replace('Game with ID: ', '')).replace(' added.', '');
             });
         this.gameId = id;

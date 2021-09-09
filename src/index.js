@@ -30,11 +30,12 @@ submit.addEventListener('click', (event)=>{
 event.preventDefault();
 const name = document.getElementById('name').value;
 const score = document.getElementById('score').value;
+if(name !== '' && score1 !== ''){
 newGame.save(name, score).then(() =>{
   newGame.get().then(() =>{
     displayList(newGame.data);
   });
-});
+});}
 });
 refresh.addEventListener('click' , ()=>{
   newGame.get().then(() =>{

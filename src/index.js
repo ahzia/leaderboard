@@ -6,7 +6,6 @@ const displayList = (data) => {
   const section = document.getElementById('leaderboard');
   const list = document.createElement('ul');
   list.id = 'list';
-  console.log(data);
   if(data!=[]){
   data.forEach((row) => {
     const { user, score } = row;
@@ -35,6 +34,11 @@ newGame.save(name, score).then(() =>{
   newGame.get().then(() =>{
     displayList(newGame.data);
   });
-})
+});
+});
+refresh.addEventListener('click' , ()=>{
+  newGame.get().then(() =>{
+    displayList(newGame.data);
+  });
 })
 });

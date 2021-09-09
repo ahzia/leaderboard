@@ -24,10 +24,10 @@ Milstone 3: final touches.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-Node JS, git 
+Node.js, git 
 ### Setup
 Clone the project 
-`$ git clone https://github.com/ahzia/TodoList`
+`$ git clone https://github.com/ahzia/leaderboard/`
 ### Install
 Install dependencies `$ npm install`
 ### Usage

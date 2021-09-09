@@ -1,17 +1,17 @@
 body {
-    background-color: bisque;
+  background-color: bisque;
 }
 
-ul{
-    list-style: none;
-    border: 2px solid black;
-    width:200px;
-    display: flex;
-    flex-direction: column; 
+ul {
+  list-style: none;
+  border: 2px solid black;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
-.container{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

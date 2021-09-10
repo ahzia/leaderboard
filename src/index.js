@@ -1,28 +1,46 @@
-import './style.css';
+import './css/style.css';
+import Game from './js/Game.js';
 
-const leaderBoard = [
-  { name: 'ahmad', score: 100 },
-  { name: 'ahmad', score: 100 },
-  { name: 'ahmad', score: 100 },
-  { name: 'ahmad', score: 100 },
-  { name: 'ahmad', score: 100 },
-  { name: 'ahmad', score: 100 },
-  { name: 'ahmad', score: 100 },
-  { name: 'ahmad', score: 100 }];
-const displayList = () => {
+const displayList = (data) => {
   const section = document.getElementById('leaderboard');
   const list = document.createElement('ul');
   list.id = 'list';
-  leaderBoard.forEach((row) => {
-    const { name, score } = row;
-    const card = `<li class="" >
-    <p>${name}: ${score}</p>
+  if (data !== []) {
+    data.forEach((row) => {
+      const { user, score } = row;
+      const card = `<li class="" >
+    <p>${user}: ${score}</p>
     </li>`;
-    list.insertAdjacentHTML('beforeend', card);
-  });
+      list.insertAdjacentHTML('beforeend', card);
+    });
+  }
   section.innerHTML = '';
   section.appendChild(list);
 };
 document.addEventListener('DOMContentLoaded', () => {
-  displayList();
+  const newGame = new Game('New Game');
+  newGame.create().then(() => {
+    newGame.get().then(() => {
+      displayList(newGame.data);
+    });
+  });
+  const submit = document.getElementById('submit');
+  const refresh = document.getElementById('refresh');
+  submit.addEventListener('click', (event) => {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const score = document.getElementById('score').value;
+    if (name !== '' && score !== '') {
+      newGame.save(name, score).then(() => {
+        newGame.get().then(() => {
+          displayList(newGame.data);
+        });
+      });
+    }
+  });
+  refresh.addEventListener('click', () => {
+    newGame.get().then(() => {
+      displayList(newGame.data);
+    });
+  });
 });

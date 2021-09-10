@@ -5,6 +5,7 @@ body {
 .leaderboard {
   display: flex;
   justify-content: center;
+  width: 300px;
 }
 
 ul {
@@ -18,7 +19,7 @@ ul {
 
 li {
   border: 2px solid green;
-  width: 80%;
+  width: 100%;
 }
 
 .container {
@@ -34,4 +35,11 @@ h1 {
 
 .error {
   color: red;
+}
+
+form {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

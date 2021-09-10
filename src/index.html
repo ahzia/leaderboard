@@ -11,6 +11,14 @@
     <div class='container'>
         <div>
             <h1>Leaderboard</h1>
+            <div>
+                <p>Recent Scores</p>
+                <button id='refresh'>Refresh</button>
+            </div>
+            <div id='leaderboard' class='leaderboard'></div>
+        </div>
+        <div>
+
             <form>
                 <p>Add Your score</p>
                 <input type='text' id='name' placeholder='Your name' required>
@@ -18,9 +26,7 @@
                 <input type='submit' id='submit' value='Submit'>
                 <p id='error' class='error'></p>
             </form>
-            <p>Recent Scores</p>
-            <button id='refresh'>Refresh</button>
-            <div id='leaderboard' class='leaderboard'></div>
+
         </div>
     </div>
 </body>

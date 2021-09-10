@@ -2,12 +2,18 @@ body {
   background-color: bisque;
 }
 
+.leaderboard{
+  display: flex;
+  justify-content: center;
+}
+
 ul {
   list-style: none;
+  width: 400px;
+}
+
+li{
   border: 2px solid black;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
 }
 
 .container {
@@ -15,3 +21,13 @@ ul {
   justify-content: space-around;
   align-items: center;
 }
+
+h1{
+  display:flex;
+  justify-content: center;
+}
+
+.error{
+  color:red;
+}
+

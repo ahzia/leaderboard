@@ -6,6 +6,10 @@ export default class Game {
     this.data = null;
   }
 
+  setId(id) {
+    this.gameId = id;
+  }
+
   async get() {
     const endpoint = `${this.baseUrl + this.gameId}/scores/`;
     await fetch(endpoint)
@@ -40,5 +44,6 @@ export default class Game {
         id = (data.result.replace('Game with ID: ', '')).replace(' added.', '');
       });
     this.gameId = id;
+    localStorage.setItem('gameId', id);
   }
 }

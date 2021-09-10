@@ -2,16 +2,44 @@ body {
   background-color: bisque;
 }
 
+.leaderboard {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
 ul {
   list-style: none;
-  border: 2px solid black;
-  width: 200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  border: 2px solid green;
+  width: 100%;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+}
+
+form {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

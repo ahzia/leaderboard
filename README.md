@@ -11,6 +11,9 @@ Milstone 1: basic page structure.
 Milstone 2: send and receive data from API.
 Milstone 3: final touches.
 
+## Live Link:
+[live link](https://ahzia.github.io/leaderboard/)
+
 ## Built With
 
 - HTML, CSS, JS
